@@ -1,0 +1,204 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --bar-widht: 30px;
+    --bar-height: 4px;
+    --hamburger-gap: 4px;
+    --foreground: white;
+    --background: #C7752C;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+
+    @media screen and (min-width: 764px) {
+        display: none;
+    }
+}
+
+
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu.hamburger-menu:has(input:checked) {
+    --foreground: #C7752C;
+    --background: #353946;
+}
+
+.hamburger-menu::before,
+.hamburger-menu input,
+.hamburger-menu::after {
+    content: "";
+    width: var(--bar-widht);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+}
+
+.sidebar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: .5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: #353946;
+    color: var(--background);
+    max-width: 10rem;
+    min-height: 100vh;
+    position: absolute;
+
+    @media screen and (min-width: 764px) {
+        position: absolute;
+        display: flex;
+        display: inline-block;
+    }
+
+}
+
+.hamburger-menu:has(input:checked)+.sidebar {
+    translate: 0;
+}
+
+
+
+.sidebar a {
+    text-decoration: none;
+    color: #4D9ABB;
+}
+
+.sidebar div {
+    margin-bottom: 20px;
+}
+
+.sidebar a:hover {
+    background: rgba(199, 117, 44, 0.5);
+    color: white;
+}
+
+#active {
+    background-color: #C7752C;
+    opacity: 75%;
+    color: white;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h2:not(.light h2),
+p:not(.light p) {
+    color: white
+}
+
+.container div {
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.container {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.light {
+    background-color: #b8d3d1;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(203, 197, 197, 0.5);
+    margin-top: 10px;
+}
+
+.blue {
+    background-color: #4D9ABB;
+    box-shadow: 0 0 10px rgba(203, 197, 197, 0.5);
+}
+
+.orange {
+    background-color: #C7752C;
+    box-shadow: 0 0 10px rgba(203, 197, 197, 0.5);
+}
+
+header {
+    background-color: #353946;
+    padding: 0;
+}
+
+
+img {
+    width: 50vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(203, 197, 197, 0.5);
+    min-width: none;
+
+    @media screen and (min-width: 764px) {
+        width: 30vw;
+        ;
+
+    }
+}
+
+footer {
+    background-color: #353946;
+    height: 50px;
+    margin: 0;
+}
