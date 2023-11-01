@@ -91,7 +91,7 @@ img {
     grid-area: hero;
     min-height: 300px;
     min-width: 200px;
-    background: url(/images/Portraits\(73\).jpg);
+    background: url(../images/Portraits\(73\).jpg);
     background-size: contain;
     background-repeat: no-repeat;
     padding: 50px;
