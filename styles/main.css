@@ -170,7 +170,7 @@ p.rotate-x {
 
 .cta1 {
     grid-area: cta1;
-    transform: translate(-150%, 95%);
+    transform: translate(-250%, 95%);
     animation: shift-in 2s 3s cubic-bezier(0, .9, .3, 1) forwards;
 }
 
@@ -181,7 +181,7 @@ p.rotate-x {
 
 @keyframes shift-in {
     0% {
-        transform: translate(-110%, 95%);
+        transform: translate(-200%, 95%);
     }
 
     50% {
@@ -224,6 +224,7 @@ p.rotate-x {
 
 .menu li {
     transition: transform 0.3s ease;
+    margin: 10px 0;
 }
 
 .menu a {
