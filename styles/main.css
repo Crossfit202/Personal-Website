@@ -140,6 +140,7 @@ p.rotate-x {
     transform: rotateX(-90deg);
     background: var(--dark);
     color: white;
+    padding: 10px;
 }
 
 @keyframes rotateX {
@@ -170,15 +171,15 @@ p.rotate-x {
 .cta1 {
     grid-area: cta1;
     transform: translate(-150%, 95%);
-    animation: show-background 2s .5s cubic-bezier(0, .9, .3, 1) forwards;
+    animation: shift-in 2s 3s cubic-bezier(0, .9, .3, 1) forwards;
 }
 
 .cta1 p {
-    animation: pop-in 2s cubic-bezier(0, .8, .4, 1.25) 2s forwards;
+    animation: text-scale 2s cubic-bezier(0, .8, .4, 1.25) 4s forwards;
     opacity: 0;
 }
 
-@keyframes show-background {
+@keyframes shift-in {
     0% {
         transform: translate(-110%, 95%);
     }
@@ -192,7 +193,7 @@ p.rotate-x {
     }
 }
 
-@keyframes pop-in {
+@keyframes text-scale {
     0% {
         opacity: 0;
         transform: scale(.5);
