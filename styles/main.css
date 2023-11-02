@@ -175,6 +175,11 @@ p.rotate-x {
     animation: show-background 2s .5s cubic-bezier(0, .9, .3, 1) forwards;
 }
 
+.cta1 p {
+    animation: pop-in 2s cubic-bezier(0, .8, .4, 1.25) 2s forwards;
+    opacity: 0;
+}
+
 @keyframes show-background {
     0% {
         transform: translate(-110%, 95%);
@@ -187,6 +192,23 @@ p.rotate-x {
     100% {
         transform: none;
     }
+}
+
+@keyframes pop-in {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
 }
 
 .cta2 {
