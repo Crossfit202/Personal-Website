@@ -135,19 +135,17 @@ img {
 
 
 p.rotate-x {
-    animation: rotateX 3s linear infinite;
-    transform-origin: center;
+    animation: rotateX 3s forwards;
+    animation-delay: 2s;
+    transform: rotateX(-90deg);
     background: var(--dark);
     color: white;
 }
 
 @keyframes rotateX {
-    0% {
-        transform: rotateX(0deg);
-    }
 
     100% {
-        transform: rotateX(360deg);
+        transform: none;
     }
 }
 
