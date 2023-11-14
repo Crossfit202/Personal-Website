@@ -68,6 +68,10 @@ button {
     padding: 10px 20px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
 }
@@ -403,4 +407,13 @@ p.rotate-x {
         display: none;
     }
 
+}
+
+#hoverElement {
+    width: 200px;
+    height: 100px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
 }
