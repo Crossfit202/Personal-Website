@@ -98,7 +98,6 @@ img {
     background: url(../images/Portraits\(73\).webp);
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -411,11 +410,21 @@ p.rotate-x {
 
 }
 
-#hoverElement {
-    width: 200px;
-    height: 100px;
-    background-color: #ccc;
-    text-align: center;
-    line-height: 100px;
+#hoverElement:hover {
     cursor: pointer;
+    background-color: #C7752C;
+    animation: wave 1s ease infinite;
+}
+
+
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
