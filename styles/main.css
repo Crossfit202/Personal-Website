@@ -346,13 +346,10 @@ p.rotate-x {
     }
 
     .gallery {
-        grid-template-columns: 500px;
+        grid-template-columns: 1fr 1fr;
+
     }
 
-    .gallery img {
-        width: 80%;
-        margin-left: calc(100% - 455px);
-    }
 }
 
 @media (max-width: 500px) {
@@ -361,6 +358,16 @@ p.rotate-x {
             "intro"
             "hero"
             "cta1";
+    }
+
+    .gallery {
+        grid-template-columns: 400px;
+
+    }
+
+    .gallery img {
+        width: 80%;
+        margin-left: calc(100% - 355px);
     }
 }
 
@@ -400,13 +407,6 @@ p.rotate-x {
         display: none;
     }
 
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery img {
-        width: 100%;
-    }
 
 }
 
