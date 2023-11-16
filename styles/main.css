@@ -222,7 +222,7 @@ p.rotate-x {
     text-align: center;
     color: white;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
 
 }
 
@@ -364,6 +364,7 @@ p.rotate-x {
         grid-template-columns: 1fr;
 
     }
+
 }
 
 @media (max-width: 1000px) {
