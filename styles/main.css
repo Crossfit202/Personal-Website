@@ -296,11 +296,12 @@ p.rotate-x {
     justify-content: center;
     align-items: center;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .gallery img {
     width: 100%;
+    max-width: 700px;
 }
 
 .features h2,
@@ -330,18 +331,38 @@ p.rotate-x {
     background: linear-gradient(to right, var(--orange), transparent);
 }
 
+@media (max-width: 1000px) {
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery img {
+        width: 100%;
+    }
+}
+
 @media (max-width: 700px) {
     .top {
         grid-template-areas:
             "intro hero"
-            "cta1"
-            "cta2";
+            "cta1";
+
 
         grid-template-columns: 1fr;
     }
 
     .about {
         grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 500px;
+    }
+
+    .gallery img {
+        width: 80%;
+        margin-left: calc(100% - 455px);
     }
 }
 
@@ -350,8 +371,7 @@ p.rotate-x {
         grid-template-areas:
             "intro"
             "hero"
-            "cta1"
-            "cta2";
+            "cta1";
     }
 }
 
