@@ -361,13 +361,8 @@ p.rotate-x {
     }
 
     .gallery {
-        grid-template-columns: 400px;
+        grid-template-columns: 1fr;
 
-    }
-
-    .gallery img {
-        width: 80%;
-        margin-left: calc(100% - 355px);
     }
 }
 
