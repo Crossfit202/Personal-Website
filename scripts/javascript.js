@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var audio = document.getElementById("myAudio");
     var audioSource = document.getElementById("audioSource");
     var hoverElement = document.getElementById("hoverElement");
+    var songTitle = document.getElementById("songTitle");
 
     var originalSongs = [
         { name: "Heart and Soul", src: "/music/Heart and Soul.mp3" },
@@ -80,6 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
             audio.load();
             audio.play();
 
+            songTitle.innerHTML = randomSong.name
+
             // Display the name of the song
             console.log("Now playing: " + randomSong.name);
 
@@ -91,9 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    hoverElement.addEventListener("mouseover", playRandomSong);
+    hoverElement.addEventListener("mouseenter", playRandomSong);
 
-    hoverElement.addEventListener("mouseout", function () {
+    hoverElement.addEventListener("mouseleave", function () {
         audio.pause();
         audio.currentTime = 0;
     });

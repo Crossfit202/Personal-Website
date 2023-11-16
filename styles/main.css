@@ -30,8 +30,10 @@ body {
     min-height: calc(100vh - 100px);
     margin: 50px;
     background-attachment: fixed;
-    letter-spacing: -1px;
+    letter-spacing: -.5px;
+    font-size: 20px;
 }
+
 
 h1,
 h2,
@@ -40,26 +42,6 @@ h4,
 h5,
 h6 {
     margin: 0 0 5px 0;
-}
-
-.item {
-
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid rgba(0, 0, 0, 0.03);
-    border-radius: 3px;
-    font-size: 35px;
-    background-color: var(--orange);
-}
-
-.item p {
-    margin: 0 0 5px 0;
-}
-
-
-body {
-    font-size: 15px;
 }
 
 button {
@@ -86,9 +68,10 @@ img {
     grid-gap: 20px;
     grid-template-areas:
         "intro intro"
-        "hero cta1"
-        "hero cta2";
-    grid-template-columns: 200px 1fr;
+        "hero cta1";
+    grid-template-columns: 500px 1fr;
+    grid-template-rows: 200px 600px;
+    font-size: 30px;
 }
 
 .hero {
@@ -96,8 +79,9 @@ img {
     min-height: 300px;
     min-width: 200px;
     background: url(../images/Portraits\(73\).webp);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -167,7 +151,7 @@ p.rotate-x {
 
 .cta p {
     margin: 0;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 300;
 }
 
