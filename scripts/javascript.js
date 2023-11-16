@@ -14,9 +14,9 @@ navButton.addEventListener('click', toggleNav);
 document.addEventListener("DOMContentLoaded", function () {
     // Array of image URLs in your repository
     var imageRepository = [
-        "/images/gallery/GuitarRender.webp",
-        "/images/gallery/realGuitar1.webp",
-        "/images/gallery/RealGuitar2.webp",
+        "./images/gallery/GuitarRender.webp",
+        "./images/gallery/realGuitar1.webp",
+        "./images/gallery/RealGuitar2.webp",
         // Add more image URLs as needed
     ];
 
