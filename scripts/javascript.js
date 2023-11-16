@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", function () {
     var songTitle = document.getElementById("songTitle");
 
     var originalSongs = [
-        { name: "Heart and Soul", src: "../music/Heart and Soul.mp3" },
-        { name: "Random Freestyle Mar 9th, 2023", src: "../music/Random Freestyle loop Mar9.mp3" },
-        { name: "Random Freestyle Mar 10th, 2023", src: "../music/Freestyle loop mar10.mp3" },
-        { name: "Random Freestyle Mar 11th, 2023", src: "../music/freestyle loop mar 11.mp3" },
-        { name: "Random Freestyle Mar 11th, 2023", src: "../music/Freestyle loop mar11 part 2.mp3" },
-        { name: "Random Freestyle Mar 12th, 2023", src: "../music/freestyle loop mar 12.mp3" },
-        { name: "Random Freestyle Apr 5th, 2023", src: "../music/freestyle april 5th.mp3" },
-        { name: "Poor Wayfaring Man of Grief", src: "../music/Poor Wayfaring Man of Grief.mp3" },
+        { name: "Heart and Soul", src: "./music/Heart and Soul.mp3" },
+        { name: "Random Freestyle Mar 9th, 2023", src: "./music/Random Freestyle loop Mar9.mp3" },
+        { name: "Random Freestyle Mar 10th, 2023", src: "./music/Freestyle loop mar10.mp3" },
+        { name: "Random Freestyle Mar 11th, 2023", src: "./music/freestyle loop mar 11.mp3" },
+        { name: "Random Freestyle Mar 11th, 2023", src: "./music/Freestyle loop mar11 part 2.mp3" },
+        { name: "Random Freestyle Mar 12th, 2023", src: "./music/freestyle loop mar 12.mp3" },
+        { name: "Random Freestyle Apr 5th, 2023", src: "./music/freestyle april 5th.mp3" },
+        { name: "Poor Wayfaring Man of Grief", src: "./music/Poor Wayfaring Man of Grief.mp3" },
 
         // Add more songs as needed
     ];

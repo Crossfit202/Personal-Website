@@ -331,17 +331,6 @@ p.rotate-x {
     background: linear-gradient(to right, var(--orange), transparent);
 }
 
-@media (max-width: 1000px) {
-
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .gallery img {
-        width: 100%;
-    }
-}
-
 @media (max-width: 700px) {
     .top {
         grid-template-areas:
@@ -409,6 +398,14 @@ p.rotate-x {
 
     [aria-expanded="true"] .open {
         display: none;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery img {
+        width: 100%;
     }
 
 }
