@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var songTitle = document.getElementById("songTitle");
 
     var originalSongs = [
-        { name: "Heart and Soul", src: "/music/Heart and Soul.mp3" },
+        { name: "Heart and Soul", src: "../music/Heart and Soul.mp3" },
         { name: "Random Freestyle Mar 9th, 2023", src: "../music/Random Freestyle loop Mar9.mp3" },
         { name: "Random Freestyle Mar 10th, 2023", src: "../music/Freestyle loop mar10.mp3" },
         { name: "Random Freestyle Mar 11th, 2023", src: "../music/freestyle loop mar 11.mp3" },
