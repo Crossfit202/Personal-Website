@@ -44,21 +44,27 @@ h6 {
     margin: 0 0 5px 0;
 }
 
-button {
-    background: var(--mid_blue);
+.about__button {
+    background: var(--light_blue);
     border: 0;
     padding: 10px 20px;
     font-size: 20px;
     transition: all 0.5s;
+    text-decoration: none;
 }
 
-button:hover {
+.about__button:visited {
+    color: inherit;
+}
+
+.about__button:hover {
     cursor: pointer;
     background-color: var(--dark);
     color: white;
+    animation: wiggle 0.5s ease infinite;
 }
 
-button:hover span {
+.about__button:hover span {
     color: white;
 }
 
@@ -199,8 +205,16 @@ p.rotate-x {
 
 }
 
+.menu__button {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
 
-.menu ul {
+.menu__button:hover {
+    background: var(--orange);
+}
+
+.menu__list {
     display: grid;
     grid-gap: 10px;
     padding: 0;
@@ -209,12 +223,20 @@ p.rotate-x {
     font-size: 15px;
 }
 
-.menu li {
-    transition: transform 0.3s ease;
-    margin: 10px 0;
+.menu__list li {
+    margin: 5px;
 }
 
-.menu a {
+.menu__item {
+    background: var(--light_blue);
+    border: 0;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.menu__item,
+.menu__button {
     background: var(--dark);
     display: block;
     text-decoration: none;
@@ -226,8 +248,7 @@ p.rotate-x {
 
 }
 
-.menu a:hover,
-.about button:hover {
+.menu__item:hover {
     background: var(--orange);
     color: white;
     animation: wiggle 0.5s ease infinite;
@@ -284,11 +305,39 @@ p.rotate-x {
 }
 
 .about {
-    background: white;
-    padding: 50px;
+    background-color: var(--mid_blue);
     display: grid;
-    grid-template-columns: 400px 1fr;
+    gap: 10px;
+    grid-template-areas: "title title"
+        "image image"
+        "links links";
     align-items: center;
+    height: 500px;
+    padding: 20px;
+}
+
+.button__grid {
+    grid-area: links;
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume {
+    grid-area: image;
+    height: 100%;
+    width: 100%;
+    transition: all .5s;
+}
+
+.resume:active {
+    scale: 1.5;
+}
+
+.about__title {
+    grid-area: title;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px var(--dark);
 }
 
 .gallery {
@@ -333,8 +382,7 @@ p.rotate-x {
 
 @media (max-width: 700px) {
     .top {
-        grid-template-areas:
-            "intro hero"
+        grid-template-areas: "intro hero"
             "cta1";
 
 
@@ -354,8 +402,7 @@ p.rotate-x {
 
 @media (max-width: 500px) {
     .top {
-        grid-template-areas:
-            "intro"
+        grid-template-areas: "intro"
             "hero"
             "cta1";
     }
