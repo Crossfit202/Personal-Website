@@ -2,6 +2,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -37,7 +38,7 @@ body {
 }
 
 .reset-btn {
-    background-color: #4caf50;
+    background-color: #4D9ABB;
     color: #fff;
     font-size: 1em;
     padding: 10px 20px;
@@ -48,5 +49,20 @@ body {
 }
 
 .reset-btn:hover {
-    background-color: #45a049;
+    background-color: #353946;
+}
+
+.game__download {
+    margin-top: 50px;
+    background-color: rgb(201, 117, 43);
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.game__download:hover {
+    background-color: #4D9ABB;
 }
