@@ -8,8 +8,11 @@ body {
     margin: 0;
 }
 
-.container {
+.game {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    order: 1;
 }
 
 .board {
@@ -65,6 +68,7 @@ body {
 
 .game__download__mac {
     background-color: #353946;
+    margin-bottom: 100px;
 }
 
 .game__download:hover,
@@ -93,6 +97,7 @@ body {
     .game__about {
         display: none;
     }
+
 }
 
 @media (min-width: 1000px) {
