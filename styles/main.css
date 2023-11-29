@@ -501,6 +501,11 @@ p.rotate-x {
     color: white;
 }
 
+#hoverElement,
+#featureHover {
+    transition: all .5s;
+}
+
 #hoverElement:hover,
 #featureHover:hover {
     cursor: pointer;
