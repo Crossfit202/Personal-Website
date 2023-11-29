@@ -102,6 +102,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+function toggleImageGrid(hobbyId) {
+    var imageGrid = document.getElementById(hobbyId + "-images");
+    if (imageGrid.style.display === "none") {
+        imageGrid.style.display = "grid";
+    } else {
+        imageGrid.style.display = "none";
+    }
+}
+
 
 
 
