@@ -281,7 +281,7 @@ p.rotate-x {
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(33vw, 1fr));
     grid-gap: 20px;
     overflow: hidden;
 }
@@ -514,6 +514,6 @@ p.rotate-x {
     }
 
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
