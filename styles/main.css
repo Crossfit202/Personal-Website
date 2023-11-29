@@ -292,6 +292,11 @@ p.rotate-x {
     text-align: center;
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
     border-radius: 20px;
+    text-decoration: none;
+}
+
+.feature:visited {
+    color: var(--dark);
 }
 
 .feature .icon {
@@ -496,10 +501,14 @@ p.rotate-x {
     color: white;
 }
 
-
-#hoverElement:hover {
+#hoverElement:hover,
+#featureHover:hover {
     cursor: pointer;
     background-color: #C7752C;
+}
+
+
+#hoverElement:hover {
     animation: wave 1s ease infinite;
 }
 
@@ -522,15 +531,14 @@ p.rotate-x {
 }
 
 header {
-    color: white;
-    text-shadow: var(--shadow);
-    font-size: 2rem;
     text-align: center;
 }
 
 .job__title {
     border-top: 5px solid var(--mid_blue);
     padding: 15px;
+    color: white;
+    text-shadow: var(--shadow);
 }
 
 .about-me-section {
@@ -539,16 +547,12 @@ header {
     margin-bottom: 20px;
 }
 
-.section-title {
-    color: #333;
-}
-
 .hobby-section {
     margin-top: 20px;
 }
 
 .hobby-description {
-    color: #555;
+    color: var(--dark);
 }
 
 .show-images-button {
@@ -569,4 +573,116 @@ header {
     height: auto;
     margin: 5px;
     border-radius: 5px;
+}
+
+.section-title {
+    color: white;
+    text-shadow: var(--shadow);
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    order: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.reset-btn {
+    background-color: #4D9ABB;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    width: 50%;
+}
+
+.reset-btn:hover {
+    background-color: darkgreen;
+}
+
+.game__download,
+.game__download__mac {
+    margin: 50px 30px;
+    background-color: #c9752b;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.game__download__mac {
+    background-color: #353946;
+    margin-bottom: 100px;
+}
+
+.game__download:hover,
+.game__download__mac:hover {
+    background-color: #4D9ABB;
+}
+
+.phone__info,
+.game__about {
+    color: var(--dark);
+    margin-top: 50px;
+}
+
+@media (max-width: 1000px) {
+
+    .game__download,
+    .game__download__mac {
+        display: none;
+    }
+
+    .game__about {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1000px) {
+
+    .game__download,
+    .game__download__mac {
+        display: block;
+    }
+
+    .game__about {
+        display: block;
+    }
+
+    .phone__info {
+        display: none;
+    }
 }
