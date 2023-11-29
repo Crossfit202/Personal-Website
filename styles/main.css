@@ -394,7 +394,6 @@ p.rotate-x {
         grid-template-columns: 1fr 1fr;
 
     }
-
 }
 
 @media (max-width: 500px) {
@@ -462,6 +461,7 @@ p.rotate-x {
     .about__button:hover {
         animation: none;
     }
+
 }
 
 @media (min-width: 1000px) {
@@ -603,6 +603,12 @@ header {
 .image-grid {
     display: none;
     margin-top: 30px;
+
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+}
+
+.music-grid {
+    margin-top: 30px;
 }
 
 .image-grid img {
@@ -610,6 +616,8 @@ header {
     height: auto;
     margin: 5px;
     border-radius: 5px;
+
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .section-title {

@@ -116,7 +116,6 @@ function toggleImageGrid(hobbyId) {
 
     if (imageGrid.style.display === "none") {
         imageGrid.style.display = "grid";
-        imageGrid.style.gridTemplateColumns = "1fr 1fr 1fr";
         imageGrid.style.gap = "20px"
         button.textContent = "Hide";
     } else {
