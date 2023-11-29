@@ -102,14 +102,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* -------- About me Image toggle ---------- */
+
 function toggleImageGrid(hobbyId) {
     var imageGrid = document.getElementById(hobbyId + "-images");
+    var button = document.querySelector("[data-hobby-id='" + hobbyId + "']");
+
     if (imageGrid.style.display === "none") {
         imageGrid.style.display = "grid";
+        imageGrid.style.gridTemplateColumns = "1fr 1fr 1fr";
+        imageGrid.style.gap = "20px"
+        button.textContent = "Hide";
     } else {
         imageGrid.style.display = "none";
+        button.textContent = "Show Items";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var audioPlayer = document.getElementById("audioPlayer");
+    var playButton = document.getElementById("playButton");
+
+    playButton.addEventListener("click", function () {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+            playButton.textContent = "Pause";
+        } else {
+            audioPlayer.pause();
+            playButton.textContent = "Play MP3";
+        }
+    });
+});
 
 
 

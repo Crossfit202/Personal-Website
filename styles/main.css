@@ -530,6 +530,8 @@ p.rotate-x {
     }
 }
 
+/* ----------- Professional Information Page ----------------- */
+
 .resume__display {
     width: 100%;
     height: 80vh;
@@ -546,31 +548,61 @@ header {
     text-shadow: var(--shadow);
 }
 
+/* --------------- About me page -------------*/
+
 .about-me-section {
-    max-width: 800px;
     margin: 0 auto;
     margin-bottom: 20px;
 }
 
+.cuda {
+    font-style: italic;
+    color: var(--dark);
+}
+
+.cuda:hover {
+    color: white;
+    text-shadow: var(--shadow);
+}
+
 .hobby-section {
-    margin-top: 20px;
+    margin-top: 60px;
+    border: 2px solid var(--dark);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(184, 212, 210, .8);
 }
 
 .hobby-description {
     color: var(--dark);
+    margin-bottom: 25px;
 }
 
 .show-images-button {
     padding: 10px;
-    background-color: #3498db;
-    color: #fff;
+    font-size: 2rem;
+    font-weight: 400;
+    background-color: var(--mid_blue);
+    color: white;
+    text-shadow: var(--shadow);
+    box-shadow: var(--shadow);
     border: none;
     cursor: pointer;
+    transition: all .3s;
+    border-radius: 10px;
+}
+
+.show-images-button:hover {
+    color: var(--dark);
+    background-color: white;
+    text-shadow: none;
+    font-weight: 900;
+
 }
 
 .image-grid {
     display: none;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .image-grid img {
@@ -584,6 +616,13 @@ header {
     color: white;
     text-shadow: var(--shadow);
 }
+
+#audioPlayer {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+/* ---------- Game page ---------------   */
 
 .game {
     display: flex;
