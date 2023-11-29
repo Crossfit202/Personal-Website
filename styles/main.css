@@ -217,7 +217,7 @@ p.rotate-x {
     grid-gap: 10px;
     padding: 0;
     list-style: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     font-size: 15px;
 }
 
@@ -305,7 +305,7 @@ p.rotate-x {
 .button__grid {
     grid-area: links;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .resume {
