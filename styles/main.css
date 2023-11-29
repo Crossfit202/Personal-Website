@@ -168,7 +168,7 @@ p.rotate-x {
 }
 
 .cta1 p {
-    animation: text-scale 2s cubic-bezier(0, .8, .4, 1.25) 4s forwards;
+    animation: text-scale cubic-bezier(0, .8, .4, 1.25) 2s forwards;
     opacity: 0;
 }
 
