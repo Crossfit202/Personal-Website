@@ -310,7 +310,7 @@ p.rotate-x {
 
 .resume {
     grid-area: image;
-    height: 1000px;
+    height: 600px;
     width: 100%;
     transition: all .5s;
     margin-bottom: 50px;
