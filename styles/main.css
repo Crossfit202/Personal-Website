@@ -532,3 +532,41 @@ header {
     border-top: 5px solid var(--mid_blue);
     padding: 15px;
 }
+
+.about-me-section {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #333;
+}
+
+.hobby-section {
+    margin-top: 20px;
+}
+
+.hobby-description {
+    color: #555;
+}
+
+.show-images-button {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.image-grid {
+    display: none;
+    margin-top: 10px;
+}
+
+.image-grid img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+    border-radius: 5px;
+}
