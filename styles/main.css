@@ -306,6 +306,7 @@ p.rotate-x {
     grid-area: links;
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
 
 .resume {
@@ -316,9 +317,6 @@ p.rotate-x {
     margin-bottom: 50px;
 }
 
-.resume:active {
-    scale: 1.5;
-}
 
 .about__title {
     grid-area: title;
@@ -516,4 +514,21 @@ p.rotate-x {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.resume__display {
+    width: 100%;
+    height: 80vh;
+}
+
+header {
+    color: white;
+    text-shadow: var(--shadow);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.job__title {
+    border-top: 5px solid var(--mid_blue);
+    padding: 15px;
 }
