@@ -17,7 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
         "./images/gallery/GuitarRender.webp",
         "./images/gallery/realGuitar1.webp",
         "./images/gallery/RealGuitar2.webp",
-        // Add more image URLs as needed
+        "./images/gallery/AloraSky.jpg",
+        "./images/gallery/attemptedBlock.jpg",
+        "./images/gallery/frisbeeTeam.jpg",
+        "./images/gallery/layout.jpg",
+        "./images/gallery/meBlocking.jpg",
+        "./images/gallery/pull.jpg"
+
     ];
 
     // Function to shuffle the array randomly
