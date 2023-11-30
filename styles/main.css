@@ -151,7 +151,7 @@ p.rotate-x {
 
 
 .cta {
-    background: var(--mid_blue);
+    background: var(--dark);
     display: grid;
     align-items: center;
     justify-items: center;
@@ -502,13 +502,19 @@ header {
     text-shadow: var(--shadow);
 }
 
-.hobby-section {
+.hobby-section,
+.game__about,
+.phone__info {
     margin-top: 60px;
     border: 2px solid var(--dark);
     border-radius: 10px;
     padding: 20px;
     padding-bottom: 30px;
     background-color: rgb(184, 212, 210, .8);
+}
+
+.game__about {
+    display: none;
 }
 
 .hobby-description {
@@ -617,6 +623,7 @@ header {
 
 .game__download,
 .game__download__mac {
+    display: none;
     margin: 50px 30px;
     background-color: #c9752b;
     color: white;
@@ -637,32 +644,9 @@ header {
     background-color: #4D9ABB;
 }
 
-.phone__info,
-.game__about {
-    color: var(--dark);
-    margin-top: 50px;
-}
-
 @media (min-width: 1000px) {
 
-    .game__download,
-    .game__download__mac {
-        display: block;
-    }
-
-    .game__about {
-        display: block;
-    }
-
-    .phone__info {
-        display: none;
-    }
-
     .resume__button {
-        display: none;
-    }
-
-    .about__text {
         display: none;
     }
 
@@ -683,6 +667,19 @@ header {
 @media (min-width: 1500px) {
     .image-grid img {
         max-width: 20%;
+    }
+
+    .game__download,
+    .game__download__mac {
+        display: block;
+    }
+
+    .game__about {
+        display: block;
+    }
+
+    .phone__info {
+        display: none;
     }
 }
 
@@ -740,15 +737,6 @@ header {
 
     .about__button:hover {
         animation: none;
-    }
-
-    .game__download,
-    .game__download__mac {
-        display: none;
-    }
-
-    .game__about {
-        display: none;
     }
 
     .image-grid img {
