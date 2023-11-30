@@ -382,96 +382,9 @@ p.rotate-x {
     padding: 20px;
 }
 
-@media (max-width: 767px) {
-    .top {
-        grid-template-areas: "intro "
-            "hero "
-            "cta1 ";
-        grid-template-columns: 1fr;
-    }
 
-    .gallery {
-        grid-template-columns: 1fr 1fr;
-
-    }
-}
-
-@media (max-width: 500px) {
-
-
-    .gallery {
-        grid-template-columns: 1fr;
-
-    }
-
-}
-
-@media (max-width: 1000px) {
-    .menu {
-        order: -1;
-        perspective: 800px;
-    }
-
-    [aria-controls="menu-list"] {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .menu ul {
-        max-height: 0;
-        transform: rotateX(90deg);
-        overflow: hidden;
-        transition: all 0.5s;
-    }
-
-    [aria-expanded="true"]~ul {
-        display: grid;
-        max-height: 500px;
-        transform: rotateX(0);
-    }
-
-    [aria-expanded="false"] .close {
-        display: none;
-    }
-
-    [aria-expanded="true"] .close {
-        display: inline-block;
-    }
-
-    [aria-expanded="true"] .open {
-        display: none;
-    }
-
-    .resume {
-        display: none;
-    }
-
-    .button__grid {
-        flex-direction: column;
-    }
-
-    .about__button {
-        margin-bottom: 25px;
-    }
-
-    .about__button {
-        transition: all .5s;
-    }
-
-    .about__button:hover {
-        animation: none;
-    }
-
-}
-
-@media (min-width: 1000px) {
-    .resume__button {
-        display: none;
-    }
-
-    .about__text {
-        display: none;
-    }
+.music-grid {
+    margin-top: 30px;
 }
 
 .about__text {
@@ -607,10 +520,6 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
 }
 
-.music-grid {
-    margin-top: 30px;
-}
-
 .image-grid img {
     max-width: 100%;
     height: auto;
@@ -710,19 +619,6 @@ header {
     margin-top: 50px;
 }
 
-@media (max-width: 1000px) {
-
-    .game__download,
-    .game__download__mac {
-        display: none;
-    }
-
-    .game__about {
-        display: none;
-    }
-
-}
-
 @media (min-width: 1000px) {
 
     .game__download,
@@ -737,4 +633,117 @@ header {
     .phone__info {
         display: none;
     }
+
+    .resume__button {
+        display: none;
+    }
+
+    .about__text {
+        display: none;
+    }
+
+    .music-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+@media (min-width: 1080px) {
+    .music-grid {
+        margin-top: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu {
+        order: -1;
+        perspective: 800px;
+    }
+
+    [aria-controls="menu-list"] {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .menu ul {
+        max-height: 0;
+        transform: rotateX(90deg);
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+
+    [aria-expanded="true"]~ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX(0);
+    }
+
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+
+    .resume {
+        display: none;
+    }
+
+    .button__grid {
+        flex-direction: column;
+    }
+
+    .about__button {
+        margin-bottom: 25px;
+    }
+
+    .about__button {
+        transition: all .5s;
+    }
+
+    .about__button:hover {
+        animation: none;
+    }
+
+    .game__download,
+    .game__download__mac {
+        display: none;
+    }
+
+    .game__about {
+        display: none;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .top {
+        grid-template-areas: "intro "
+            "hero "
+            "cta1 ";
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media (max-width: 500px) {
+
+
+    .gallery {
+        grid-template-columns: 1fr;
+
+    }
+
 }
