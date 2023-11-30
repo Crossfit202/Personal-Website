@@ -1,3 +1,7 @@
+/* Example using Normalize.css */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
+
+
 :root {
     --orange: rgb(201, 117, 43);
     --dark: #353946;
