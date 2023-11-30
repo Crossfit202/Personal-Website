@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "./images/gallery/GuitarRender.webp",
         "./images/gallery/realGuitar1.webp",
         "./images/gallery/RealGuitar2.webp",
-        "./images/gallery/AloraSky.jpg",
-        "./images/gallery/attemptedBlock.jpg",
-        "./images/gallery/frisbeeTeam.jpg",
-        "./images/gallery/layout.jpg",
-        "./images/gallery/meBlocking.jpg",
-        "./images/gallery/pull.jpg"
+        "./images/gallery/AloraSky.webp",
+        "./images/gallery/attemptedBlock.webp",
+        "./images/gallery/frisbeeTeam.webp",
+        "./images/gallery/layout.webp",
+        "./images/gallery/meBlocking.webp",
+        "./images/gallery/pull.webp"
 
     ];
 
@@ -115,7 +115,8 @@ function toggleImageGrid(hobbyId) {
     var button = document.querySelector("[data-hobby-id='" + hobbyId + "']");
 
     if (imageGrid.style.display === "none") {
-        imageGrid.style.display = "grid";
+        imageGrid.style.display = "flex";
+        imageGrid.style.flexFlow = "wrap";
         imageGrid.style.gap = "20px"
         button.textContent = "Hide";
     } else {
