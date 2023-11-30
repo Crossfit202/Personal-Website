@@ -485,6 +485,8 @@ header {
 .renovation__title {
     margin-bottom: 20px;
     margin-top: 50px;
+    border-top: 2px solid var(--dark);
+    padding: 10px;
 }
 
 
@@ -525,6 +527,7 @@ header {
     cursor: pointer;
     transition: all .3s;
     border-radius: 10px;
+    margin: 10px;
 }
 
 .show-images-button:hover {
