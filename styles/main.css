@@ -283,14 +283,14 @@ p.rotate-x {
     display: none;
 }
 
-.features {
+.hobbies {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33vw, 1fr));
     grid-gap: 20px;
     overflow: hidden;
 }
 
-.feature {
+.hobby {
     background: var(--light_blue);
     padding: 10px;
     text-align: center;
@@ -299,15 +299,15 @@ p.rotate-x {
     text-decoration: none;
 }
 
-.feature:visited {
+.hobby:visited {
     color: var(--dark);
 }
 
-.feature .icon {
+.hobby .icon {
     font-size: 50px;
 }
 
-.feature p {
+.hobby p {
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -348,7 +348,7 @@ p.rotate-x {
     max-width: 700px;
 }
 
-.features h2,
+.bar,
 .gallery h2 {
     grid-column: 1 / -1;
     display: grid;
@@ -357,9 +357,10 @@ p.rotate-x {
     align-items: center;
     color: white;
     text-shadow: var(--shadow);
+    margin-bottom: 15px;
 }
 
-.features h2:before,
+.bar:before,
 .gallery h2:before {
     display: block;
     content: '';
@@ -367,7 +368,7 @@ p.rotate-x {
     background: linear-gradient(to left, var(--orange), transparent);
 }
 
-.features h2:after,
+.bar:after,
 .gallery h2:after {
     display: block;
     content: '';
@@ -429,12 +430,12 @@ p.rotate-x {
 }
 
 #hoverElement,
-#featureHover {
+#hobbyHover {
     transition: all .5s;
 }
 
 #hoverElement:hover,
-#featureHover:hover {
+#hobbyHover:hover {
     cursor: pointer;
     background-color: #C7752C;
 }

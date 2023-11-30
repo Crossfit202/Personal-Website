@@ -7,10 +7,8 @@ function toggleNav({ target }) {
 
 navButton.addEventListener('click', toggleNav);
 
-//gallery section
 
-// gallery.js
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
     // Array of image URLs in your repository
     var imageRepository = [
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         imgElement.src = imageRepository[i];
         gallerySection.appendChild(imgElement);
     }
-});
+}); */
 
 
 
