@@ -630,12 +630,6 @@ header {
         margin-top: 30px;
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@media (min-width: 1500px) {
-    .image-grid img {
-        max-width: 20%;
-    }
 
     .game__download,
     .game__download__mac {
@@ -648,6 +642,12 @@ header {
 
     .phone__info {
         display: none;
+    }
+}
+
+@media (min-width: 1500px) {
+    .image-grid img {
+        max-width: 20%;
     }
 }
 
