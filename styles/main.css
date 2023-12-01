@@ -17,7 +17,7 @@ p.rotate-x {
     background: var(--orange)
 }
 
-#hobbyHover,
+.hobby,
 #hoverElement,
 .resume,
 .resume__button {
@@ -420,7 +420,7 @@ p.rotate-x {
     color: #fff
 }
 
-#hobbyHover:hover,
+.hobby:hover,
 #hoverElement:hover {
     cursor: pointer;
     background-color: #c7752c
