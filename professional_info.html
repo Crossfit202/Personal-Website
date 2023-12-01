@@ -20,32 +20,30 @@
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
+<nav class="menu">
+    <button class="menu__button" aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">×</span>
+        Menu
+    </button>
+    <ul class="menu__list">
+        <li>
+            <a class="menu__item" href="home.html">Home</a>
+        </li>
+        <li>
+            <a class="menu__item" href="about.html">About Me</a>
+        </li>
+        <li>
+            <a class="menu__item" href="calendar.html">Weather
+                Calendar</a>
+        </li>
+        <li>
+            <a class="menu__item" href="game.html">Game</a>
+        </li>
+    </ul>
+</nav>
+
 <body>
-    <nav class="menu">
-        <button class="menu__button" aria-expanded="false" aria-controls="menu-list">
-            <span class="open">☰</span>
-            <span class="close">×</span>
-            Menu
-        </button>
-        <ul class="menu__list">
-            <li>
-                <a class="menu__item" href="home.html">
-                    Home</a>
-            </li>
-            <li>
-                <a class="menu__item" href="about.html">About Me</a>
-            </li>
-            <li>
-                <a class="menu__item" href="calendar.html">Weather
-                    Calendar</a>
-            </li>
-            <li>
-                <a class="menu__item" href="game.html">Game</a>
-            </li>
-
-        </ul>
-    </nav>
-
     <section>
 
         <h1 class="section-title">Jonathan Cross</h1>
@@ -73,6 +71,7 @@
             <p>&copy; 2023 Jonathan Cross. All rights reserved.</p>
         </footer>
 
+        <script src="./scripts/javascript.js"></script>
 </body>
 
 </html>

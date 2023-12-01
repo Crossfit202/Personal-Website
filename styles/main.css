@@ -1,43 +1,66 @@
-/* Example using Normalize.css */
-@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css';
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap);
+
+.top,
+.wrapper {
+    display: grid;
+    grid-gap: 20px
+}
+
+html,
+p.rotate-x {
+    color: var(--dark)
+}
+
+.menu__button:hover,
+.menu__item:hover {
+    background: var(--orange)
+}
+
+#hobbyHover,
+#hoverElement,
+.resume,
+.resume__button {
+    transition: .5s
+}
+
+.gallery img,
+.old,
+.resume {
+    width: 100%
+}
 
 :root {
     --orange: rgb(201, 117, 43);
     --dark: #353946;
     --mid_blue: #4D9ABB;
     --light_blue: #b8d3d1;
-    --shadow: 2px 2px 4px var(--dark);
+    --shadow: 2px 2px 4px var(--dark)
 }
 
 html {
-
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 900;
     font-size: 10px;
-    color: var(--dark);
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, .07)
 }
 
 *,
-*:before,
-*:after {
-    box-sizing: inherit;
+:after,
+:before {
+    box-sizing: inherit
 }
 
 body {
-    background-image: url("./images/topography.svg"),
-        linear-gradient(110deg, var(--light_blue), var(--dark));
-    background-size: 340px, auto;
+    background-image: linear-gradient(110deg, var(--light_blue), var(--dark));
+    background-size: auto;
     min-height: calc(100vh - 100px);
     margin: 50px;
     background-attachment: fixed;
     letter-spacing: .5px;
-    font-size: 20px;
+    font-size: 20px
 }
-
 
 h1,
 h2,
@@ -45,49 +68,41 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 0 5px 0;
+    margin: 0 0 5px
 }
 
 img {
-    max-width: 100%;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 20px;
+    max-width: 100%
 }
 
 .top {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-        "intro intro"
-        "hero cta1";
+    grid-template-areas: "intro intro" "hero cta1";
     grid-template-columns: 500px 1fr;
-    grid-template-rows: 200px 600px;
-    font-size: 30px;
+    grid-template-rows: 1fr 600px;
+    font-size: 30px
 }
 
 .hero {
     grid-area: hero;
     min-height: 300px;
     min-width: 200px;
-    background: url(../images/Portraits\(73\).webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: url(../images/Portraits\(73\).webp) center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: center
+}
 
+.cta,
+.intro,
+.menu__list {
+    display: grid
 }
 
 .intro {
-    display: grid;
-    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Kaushan Script', cursive;
     grid-area: intro;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, .3);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -96,236 +111,257 @@ img {
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     animation-delay: .5s;
-    opacity: 0;
+    opacity: 0
+}
+
+.cta,
+.menu__button,
+.menu__item {
+    background: var(--dark);
+    color: #fff
 }
 
 @keyframes fade-in {
     from {
-        opacity: 0;
+        opacity: 0
     }
 
     to {
-        opacity: 1;
+        opacity: 1
     }
-
 }
 
-
 p.rotate-x {
-    animation: rotateX 3s forwards;
-    animation-delay: 2s;
+    animation: 3s 2s forwards rotateX;
     transform: rotateX(-90deg);
-    color: var(--dark);
-    padding: 10px;
+    padding: 10px
 }
 
 @keyframes rotateX {
-
     100% {
-        transform: none;
+        transform: none
     }
 }
 
-
 .cta {
-    background: var(--dark);
-    display: grid;
     align-items: center;
     justify-items: center;
     align-content: center;
-    color: white;
     text-shadow: var(--shadow);
-    padding: 10px;
-}
-
-.cta p {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 300;
+    padding: 10px
 }
 
 .cta1 {
     grid-area: cta1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    align-items: start;
 }
 
 .cta1 p {
-    animation: text-scale cubic-bezier(0, .8, .4, 1.25) 2s forwards;
-    opacity: 0;
+    animation: 2s cubic-bezier(0, .8, .4, 1.25) forwards text-scale;
+    text-align: center;
 }
+
+.cta p {
+    margin: 0;
+    font-size: .9em;
+    font-weight: 300
+}
+
+.name {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 35px;
+}
+
+.skills {
+    font-weight: 300;
+    list-style-type: none;
+}
+
+.skill {
+    margin-bottom: 30px;
+}
+
 
 @keyframes shift-in {
     0% {
-        transform: translate(-200%, 95%);
+        transform: translate(-200%, 95%)
     }
 
     50% {
-        transform: translate(0, 95%);
+        transform: translate(0, 95%)
     }
 
     100% {
-        transform: none;
+        transform: none
     }
 }
 
 @keyframes text-scale {
     0% {
         opacity: 0;
-        transform: scale(.5);
+        transform: scale(.5)
     }
 
     40% {
-        opacity: 1;
+        opacity: 1
     }
 
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1)
     }
-
 }
 
 .menu__button {
-    font-weight: 800;
-}
-
-.menu__button:hover {
-    background: var(--orange);
+    font-weight: 800
 }
 
 .menu__list {
-    display: grid;
     grid-gap: 10px;
     padding: 0;
     list-style: none;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    font-size: 15px;
+    font-size: 15px
+}
+
+.hobby,
+.menu__button,
+.menu__item {
+    padding: 10px;
+    text-align: center;
+    text-decoration: none
 }
 
 .menu__list li {
-    margin: 5px;
+    margin: 5px
 }
 
-.menu__item,
-.menu__button {
-    background: var(--dark);
+.menu__button,
+.menu__item {
     display: block;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-    color: white;
     text-transform: uppercase;
     font-size: 16px;
-    transition: all 0.5s;
+    transition: .5s
 }
 
 .menu__item:hover {
-    background: var(--orange);
-    color: white;
-    animation: wiggle 0.5s ease infinite;
-    cursor: pointer;
+    color: #fff;
+    animation: .5s infinite wiggle;
+    cursor: pointer
+}
+
+.hobby:visited,
+.resume__button:visited {
+    color: var(--dark)
 }
 
 @keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
+
+    0%,
+    100% {
+        transform: rotate(0)
     }
 
-    25% {
-        transform: rotate(5deg);
+    25%,
+    75% {
+        transform: rotate(5deg)
     }
 
     50% {
-        transform: rotate(-5deg);
-    }
-
-    75% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
+        transform: rotate(-5deg)
     }
 }
 
-[aria-controls="menu-list"] {
-    display: none;
+[aria-controls=menu-list] {
+    display: none
+}
+
+.gallery,
+.hobbies {
+    display: grid;
+    grid-gap: 20px
 }
 
 .hobbies {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33vw, 1fr));
-    grid-gap: 20px;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .hobby {
-    background: var(--light_blue);
-    padding: 10px;
-    text-align: center;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-.hobby:visited {
-    color: var(--dark);
+    background: var(--mid_blue);
+    box-shadow: 0 0 4px rgba(255, 255, 255, .1);
+    border-radius: 20px
 }
 
 .hobby .icon {
-    font-size: 50px;
+    font-size: 50px
 }
 
 .hobby p {
-    color: var(--dark);
-    font-size: .9em;
+    font-size: .9em
 }
 
-.hobby h3 {
-    color: white;
+.bar,
+.cuda:hover,
+.gallery h2,
+.hobby h3,
+.hobby p {
+    color: #fff;
     text-shadow: var(--shadow);
+}
+
+.hobby p {
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .button__grid {
     grid-area: links;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    margin-top: 10px;
+    justify-content: space-around
 }
 
 .resume {
     grid-area: image;
     height: 500px;
-    width: 100%;
-    transition: all .5s;
-    margin-bottom: 50px;
+    margin-bottom: 50px
 }
 
-
-
 .gallery {
-    display: grid;
     justify-content: center;
     align-items: center;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr
+}
+
+.about,
+.bar,
+.gallery h2 {
+    display: grid;
+    align-items: center;
+    text-align: center;
 }
 
 .gallery img {
-    width: 100%;
-    max-width: 700px;
+    max-width: 700px
 }
 
 .bar,
 .gallery h2 {
-    grid-column: 1 / -1;
-    display: grid;
+    grid-column: 1/-1;
     grid-template-columns: 1fr auto 1fr;
     grid-gap: 20px;
-    align-items: center;
-    color: white;
-    text-shadow: var(--shadow);
-    margin-bottom: 15px;
+    margin-bottom: 15px
+}
+
+.about__text,
+.resume__button {
+    color: var(--dark);
+    text-align: center
 }
 
 .bar:before,
@@ -333,7 +369,7 @@ p.rotate-x {
     display: block;
     content: '';
     height: 10px;
-    background: linear-gradient(to left, var(--orange), transparent);
+    background: linear-gradient(to left, var(--orange), transparent)
 }
 
 .bar:after,
@@ -341,158 +377,117 @@ p.rotate-x {
     display: block;
     content: '';
     height: 10px;
-    background: linear-gradient(to right, var(--orange), transparent);
+    background: linear-gradient(to right, var(--orange), transparent)
 }
 
 .about {
     background-color: var(--light_blue);
-    display: grid;
-    grid-template-areas:
-        "image image"
-        "words words"
-        "links links";
-    align-items: center;
-    padding: 20px;
+    grid-template-areas: "image image" "words words" "links links";
+    padding: 20px
+}
+
+.game__about,
+.image-grid,
+.music-grid {
+    display: none
 }
 
 .transform {
     transform: rotate(90deg);
-    scale: .7;
+    scale: .7
 }
-
-.old {
-    width: 100%;
-}
-
 
 .music-grid {
-    margin-top: 30px;
-    display: none;
+    margin-top: 30px
 }
 
 .about__text {
     padding: 10px;
     grid-area: words;
-    color: var(--dark);
-    font-size: 3rem;
-    text-align: center;
-}
-
-
-
-.resume__button:visited {
-    color: var(--dark);
+    font-size: 3rem
 }
 
 .resume__button {
-    background-color: white;
-    color: var(--dark);
+    background-color: #fff;
     text-decoration: none;
     padding: 30px;
-    grid-column: 1 / 3;
-    text-align: center;
-    font-size: 2.5rem;
-    transition: all .5s;
+    grid-column: 1/3;
+    font-size: 2.5rem
 }
 
 .resume__button:hover {
     background-color: var(--dark);
-    color: white;
+    color: #fff
 }
 
-#hoverElement,
-#hobbyHover {
-    transition: all .5s;
-}
-
-#hoverElement:hover,
-#hobbyHover:hover {
+#hobbyHover:hover,
+#hoverElement:hover {
     cursor: pointer;
-    background-color: #C7752C;
+    background-color: #c7752c
 }
-
 
 #hoverElement:hover {
-    animation: wave 1s ease infinite;
+    animation: 1s infinite wave
 }
-
 
 @keyframes wave {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform: translateY(0)
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-10px)
     }
 }
 
-/* ----------- Professional Information Page ----------------- */
-
 .resume__display {
     width: 100%;
-    height: 80vh;
+    height: 80vh
 }
 
 header {
-    text-align: center;
-
+    text-align: center
 }
 
 .job__title {
     border-top: 5px solid var(--mid_blue);
     padding: 15px;
-    color: white;
+    color: #fff;
     text-shadow: var(--shadow);
-    text-align: center;
+    text-align: center
 }
 
-/* --------------- About me page -------------*/
-
 .about-me-section {
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 0 auto 20px
 }
 
 .renovation__title {
     margin-bottom: 20px;
     margin-top: 50px;
     border-top: 2px solid var(--dark);
-    padding: 10px;
+    padding: 10px
 }
-
-
 
 .cuda {
     font-style: italic;
-    color: var(--dark);
+    color: var(--dark)
 }
 
-.cuda:hover {
-    color: white;
-    text-shadow: var(--shadow);
-}
-
-.hobby-section,
 .game__about,
+.hobby-section,
 .phone__info {
     margin-top: 60px;
     border: 2px solid var(--dark);
     border-radius: 10px;
-    padding: 20px;
-    padding-bottom: 30px;
-    background-color: rgb(184, 212, 210, .8);
-}
-
-.game__about {
-    display: none;
+    padding: 20px 20px 30px;
+    background-color: rgb(184, 212, 210, .8)
 }
 
 .hobby-description {
     color: var(--dark);
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
 
 .show-images-button {
@@ -500,67 +495,66 @@ header {
     font-size: 2rem;
     font-weight: 400;
     background-color: var(--mid_blue);
-    color: white;
+    color: #fff;
     text-shadow: var(--shadow);
     box-shadow: var(--shadow);
     border: none;
     cursor: pointer;
-    transition: all .3s;
+    transition: .3s;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px
 }
 
 .show-images-button:hover {
     color: var(--dark);
-    background-color: white;
+    background-color: #fff;
     text-shadow: none;
-    font-weight: 900;
-
+    font-weight: 900
 }
 
 .image-grid img {
     margin: 5px;
     border-radius: 15px;
     box-shadow: 2px 2px 10px var(--dark);
-    max-width: 30%;
+    max-width: 30%
 }
 
 .image-grid {
-    display: none;
     margin-top: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: center
+}
+
+.game,
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Kaushan Script', cursive;
 }
 
 .section-title {
-    color: white;
-    text-shadow: var(--shadow);
-    text-align: center;
-    margin-top: 50px;
+    color: #fff;
+    text-shadow: var(--shadow)
 }
 
 #audioPlayer {
     margin-top: 5px;
-    margin-bottom: 25px;
+    margin-bottom: 25px
 }
-
-/* ---------- Game page ---------------   */
 
 .game {
     display: flex;
     flex-direction: column;
-    text-align: center;
     order: 1;
     justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    align-items: center
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 10px;
-    margin: 20px auto;
+    margin: 20px auto
 }
 
 .cell {
@@ -571,29 +565,29 @@ header {
     border: 1px solid #ccc;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .result {
     margin-top: 20px;
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 700
 }
 
 .reset-btn {
-    background-color: #4D9ABB;
+    background-color: #4d9abb;
     color: #fff;
     font-size: 1em;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.3s;
-    width: 50%;
+    transition: background-color .3s;
+    width: 50%
 }
 
 .reset-btn:hover {
-    background-color: darkgreen;
+    background-color: #006400
 }
 
 .game__download,
@@ -601,165 +595,138 @@ header {
     display: none;
     margin: 50px 30px;
     background-color: #c9752b;
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-size: 30px;
     padding: 15px;
     border-radius: 10px;
-    transition: all .5s;
+    transition: .5s
 }
 
 .game__download__mac {
     background-color: #353946;
-    margin-bottom: 100px;
+    margin-bottom: 100px
 }
 
 .game__download:hover,
 .game__download__mac:hover {
-    background-color: #4D9ABB;
+    background-color: #4d9abb
 }
 
-@media (min-width: 1000px) {
-
+@media (min-width:1000px) {
     .resume__button {
-        display: none;
-    }
-
-    .music-grid {
-        grid-template-columns: 1fr 1fr;
+        display: none
     }
 }
 
-
-
-@media (min-width: 1080px) {
+@media (min-width:1080px) {
     .music-grid {
         margin-top: 30px;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr
     }
 
+    .game__about,
     .game__download,
     .game__download__mac {
-        display: block;
-    }
-
-    .game__about {
-        display: block;
+        display: block
     }
 
     .phone__info {
-        display: none;
+        display: none
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width:1500px) {
     .image-grid img {
-        max-width: 20%;
+        max-width: 20%
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width:1000px) {
+
+    .about__button:hover,
+    .menu__item:hover {
+        animation: none
+    }
+
     .menu {
         order: -1;
-        perspective: 800px;
+        perspective: 800px
     }
 
-    [aria-controls="menu-list"] {
+    [aria-controls=menu-list] {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 10px
     }
 
     .menu ul {
         max-height: 0;
         transform: rotateX(90deg);
         overflow: hidden;
-        transition: all 0.5s;
+        transition: .5s
     }
 
-    [aria-expanded="true"]~ul {
+    [aria-expanded=true]~ul {
         display: grid;
         max-height: 500px;
-        transform: rotateX(0);
+        transform: rotateX(0)
     }
 
-    [aria-expanded="false"] .close {
-        display: none;
+    .resume,
+    [aria-expanded=false] .close,
+    [aria-expanded=true] .open {
+        display: none
     }
 
-    [aria-expanded="true"] .close {
-        display: inline-block;
-    }
-
-    [aria-expanded="true"] .open {
-        display: none;
-    }
-
-    .resume {
-        display: none;
+    [aria-expanded=true] .close {
+        display: inline-block
     }
 
     .button__grid {
-        flex-direction: column;
+        flex-direction: column
     }
 
     .menu__item {
         width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .menu__item:hover {
-        animation: none;
+        margin-bottom: 20px
     }
 
     .about__button {
         margin-bottom: 25px;
-    }
-
-    .about__button {
-        transition: all .5s;
-    }
-
-    .about__button:hover {
-        animation: none;
+        transition: .5s
     }
 
     .image-grid img {
-        max-width: 40%;
+        max-width: 40%
     }
 
+    .top {
+        grid-template-areas: "intro " "hero " "cta1 ";
+        grid-template-columns: 1fr
+    }
 }
 
-@media (max-width: 767px) {
-    .top {
-        grid-template-areas: "intro "
-            "hero "
-            "cta1 ";
-        grid-template-columns: 1fr;
-    }
+@media (max-width:767px) {
 
     .gallery {
-        grid-template-columns: 1fr 1fr;
-
+        grid-template-columns: 1fr 1fr
     }
 
     .transform {
-        scale: .7;
+        scale: .7
     }
 
     .image-grid {
-        margin-top: 30px;
+        margin-top: 30px
     }
 
     .image-grid img {
-        max-width: 80%;
+        max-width: 80%
     }
-
 }
 
-@media (max-width: 500px) {
-
-
+@media (max-width:500px) {
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }

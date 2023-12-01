@@ -1,143 +1,60 @@
-const navButton = document.querySelector('button[aria-expanded]');
-
-function toggleNav({ target }) {
-    const expanded = target.getAttribute('aria-expanded') === 'true' || false;
-    navButton.setAttribute('aria-expanded', !expanded);
+const navButton = document.querySelector("button[aria-expanded]");
+function toggleNav({ target: f }) {
+    let t = "true" === f.getAttribute("aria-expanded");
+    navButton.setAttribute("aria-expanded", !t)
 }
 
-navButton.addEventListener('click', toggleNav);
-
-
-/*
-document.addEventListener("DOMContentLoaded", function () {
-    // Array of image URLs in your repository
-    var imageRepository = [
-        "./images/gallery/GuitarRender.webp",
-        "./images/gallery/realGuitar1.webp",
-        "./images/gallery/RealGuitar2.webp",
-        "./images/gallery/AloraSky.webp",
-        "./images/gallery/attemptedBlock.webp",
-        "./images/gallery/frisbeeTeam.webp",
-        "./images/gallery/layout.webp",
-        "./images/gallery/meBlocking.webp",
-        "./images/gallery/pull.webp"
-
-    ];
-
-    // Function to shuffle the array randomly
-    function shuffleArray(array) {
-        for (var i = array.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
-    }
-
-    // Get the gallery section
-    var gallerySection = document.querySelector('.gallery');
-
-    // Shuffle the imageRepository array
-    shuffleArray(imageRepository);
-
-    // Display the first 3 images
-    for (var i = 0; i < 3; i++) {
-        var imgElement = document.createElement('img');
-        imgElement.src = imageRepository[i];
-        gallerySection.appendChild(imgElement);
-    }
-}); */
-
-
-
-// Music section 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    var audio = document.getElementById("myAudio");
-    var audioSource = document.getElementById("audioSource");
-    var hoverElement = document.getElementById("hoverElement");
-    var songTitle = document.getElementById("songTitle");
-
-    var originalSongs = [
-        { name: "Heart and Soul", src: "./music/Heart and Soul.mp3" },
-        { name: "Random Freestyle Mar 9th, 2023", src: "./music/Random Freestyle loop Mar9.mp3" },
-        { name: "Random Freestyle Mar 10th, 2023", src: "./music/Freestyle loop mar10.mp3" },
-        { name: "Random Freestyle Mar 11th, 2023", src: "./music/freestyle loop mar 11.mp3" },
-        { name: "Random Freestyle Mar 11th, 2023", src: "./music/Freestyle loop mar11 part 2.mp3" },
-        { name: "Random Freestyle Mar 12th, 2023", src: "./music/freestyle loop mar 12.mp3" },
-        { name: "Random Freestyle Apr 5th, 2023", src: "./music/freestyle april 5th.mp3" },
-        { name: "Poor Wayfaring Man of Grief", src: "./music/Poor Wayfaring Man of Grief.mp3" },
-
-        // Add more songs as needed
-    ];
-
-    // Create a copy of the original array
-    var songs = originalSongs.slice();
-
-    function playRandomSong() {
-        if (songs.length > 0) {
-            var randomIndex = Math.floor(Math.random() * songs.length);
-            var randomSong = songs[randomIndex];
-
-            audioSource.src = randomSong.src;
-            audio.load();
-            audio.play();
-
-            songTitle.innerHTML = randomSong.name
-
-            // Display the name of the song
-            console.log("Now playing: " + randomSong.name);
-
-            // Remove the played song from the array
-            songs.splice(randomIndex, 1);
-        } else {
-            // If all songs have been played, reset the array
-            songs = originalSongs.slice();
-        }
-    }
-
-    hoverElement.addEventListener("mouseenter", playRandomSong);
-
-    hoverElement.addEventListener("mouseleave", function () {
-        audio.pause();
-        audio.currentTime = 0;
-    });
-});
-
-/* -------- About me Image toggle ---------- */
-
-function toggleImageGrid(hobbyId) {
-    var imageGrid = document.getElementById(hobbyId + "-images");
-    var button = document.querySelector("[data-hobby-id='" + hobbyId + "']");
-
-    if (imageGrid.style.display === "none") {
-        imageGrid.style.display = "flex";
-        imageGrid.style.flexFlow = "wrap";
-        imageGrid.style.gap = "20px"
-        button.textContent = "Hide";
-    } else {
-        imageGrid.style.display = "none";
-        button.textContent = "Show Items";
-    }
+function toggleImageGrid(e) {
+    var t = document.getElementById(e + "-images"), n = document.querySelector("[data-hobby-id='" + e + "']");
+    "none" === t.style.display ? (t.style.display = "flex", t.style.flexFlow = "wrap", t.style.gap
+        = "20px", n.textContent = "Hide") : (t.style.display = "none", n.textContent = "Show Items")
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var audioPlayer = document.getElementById("audioPlayer");
-    var playButton = document.getElementById("playButton");
-
-    playButton.addEventListener("click", function () {
-        if (audioPlayer.paused) {
-            audioPlayer.play();
-            playButton.textContent = "Pause";
-        } else {
-            audioPlayer.pause();
-            playButton.textContent = "Play MP3";
-        }
+navButton.addEventListener("click", toggleNav), document.addEventListener("DOMContentLoaded",
+    function () {
+        var e = document.getElementById("myAudio"), t =
+            document.getElementById("audioSource"), n = document.getElementById("hoverElement"),
+            a = document.getElementById("songTitle"), r = [{
+                name: "Heart and Soul", src:
+                    "./music/Heart and Soul.mp3"
+            }, {
+                name: "Random Freestyle Mar 9th, 2023", src:
+                    "./music/Random Freestyle loop Mar9.mp3"
+            }, {
+                name: "Random Freestyle Mar 10th, 2023",
+                src: "./music/Freestyle loop mar10.mp3"
+            }, {
+                name: "Random Freestyle Mar 11th, 2023", src:
+                    "./music/freestyle loop mar 11.mp3"
+            }, {
+                name: "Random Freestyle Mar 11th, 2023", src:
+                    "./music/Freestyle loop mar11 part 2.mp3"
+            }, {
+                name: "Random Freestyle Mar 12th, 2023",
+                src: "./music/freestyle loop mar 12.mp3"
+            }, {
+                name: "Random Freestyle Apr 5th, 2023",
+                src: "./music/freestyle april 5th.mp3"
+            }, {
+                name: "Poor Wayfaring Man of Grief", src:
+                    "./music/Poor Wayfaring Man of Grief.mp3"
+            }], o = r.slice();
+        n.addEventListener("mouseenter", function n() {
+            if (o.length > 0) {
+                var l = Math.floor(Math.random() * o.length), s = o[l]; t.src = s.src, e.load(),
+                    e.play(), a.innerHTML = s.name, console.log("Now playing: " + s.name), o.splice(l, 1)
+            }
+            else o = r.slice()
+        }), n.addEventListener("mouseleave", function () {
+            e.pause(),
+                e.currentTime = 0
+        })
+    }), document.addEventListener("DOMContentLoaded", function () {
+        var e = document.getElementById("audioPlayer"), t = document.getElementById("playButton");
+        t.addEventListener("click", function () {
+            e.paused ? (e.play(), t.textContent = "Pause") :
+                (e.pause(), t.textContent = "Play MP3")
+        })
     });
-});
 
-
-
-
+document.addEventListener("DOMContentLoaded", () => { let t = document.getElementById("board"), e = document.getElementById("result"), n = document.getElementById("resetBtn"), d = "X", l = ["", "", "", "", "", "", "", "", ""], r = !0; function i() { for (let t of [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]) { let [e, n, d] = t; if (l[e] && l[e] === l[n] && l[e] === l[d]) return l[e] } return null } function o() { return !l.includes("") } function c(t) { if (l[t] || !r) return; l[t] = d, a(); let n = i(); n ? (e.textContent = `${n} wins!`, r = !1) : o() ? (e.textContent = "It's a draw!", r = !1) : d = "X" === d ? "O" : "X" } function a() { t.innerHTML = "", l.forEach((e, n) => { let d = document.createElement("div"); d.classList.add("cell"), d.textContent = e, d.addEventListener("click", () => c(n)), t.appendChild(d) }) } function u() { d = "X", l = ["", "", "", "", "", "", "", "", ""], r = !0, e.textContent = "", a() } n.addEventListener("click", u), a() });
