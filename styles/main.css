@@ -250,7 +250,7 @@ p.rotate-x {
 
 .menu__item:hover {
     color: #fff;
-    animation: .5s infinite wiggle;
+    animation: 1s infinite wiggle;
     cursor: pointer
 }
 
@@ -268,11 +268,11 @@ p.rotate-x {
 
     25%,
     75% {
-        transform: rotate(5deg)
+        transform: rotate(2deg)
     }
 
     50% {
-        transform: rotate(-5deg)
+        transform: rotate(-2deg)
     }
 }
 
