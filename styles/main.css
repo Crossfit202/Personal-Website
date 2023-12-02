@@ -394,7 +394,7 @@ p.rotate-x {
 
 .transform {
     transform: rotate(90deg);
-    scale: .7
+    scale: 0.7;
 }
 
 .music-grid {
@@ -713,7 +713,7 @@ header {
     }
 
     .transform {
-        scale: .7
+        scale: 0.7;
     }
 
     .image-grid {
