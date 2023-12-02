@@ -77,9 +77,9 @@ img {
 
 .top {
     grid-template-areas: "intro intro" "hero cta1";
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 400px 1fr;
     grid-template-rows: 1fr 600px;
-    font-size: 30px
+    font-size: 26px
 }
 
 .hero {
@@ -87,10 +87,6 @@ img {
     min-height: 300px;
     min-width: 200px;
     background: url(../images/Portraits\(73\).webp) center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center
 }
 
 .cta,
@@ -159,15 +155,12 @@ p.rotate-x {
     align-items: start;
 }
 
-.cta1 p {
-    animation: 2s cubic-bezier(0, .8, .4, 1.25) forwards text-scale;
-    text-align: center;
-}
-
 .cta p {
     margin: 0;
     font-size: .9em;
-    font-weight: 300
+    font-weight: 300;
+    animation: 2s cubic-bezier(0, .8, .4, 1.25) forwards text-scale;
+    text-align: center;
 }
 
 .name {
@@ -702,7 +695,23 @@ header {
 
     .top {
         grid-template-areas: "intro " "hero " "cta1 ";
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 500px 600px;
+    }
+
+    .skills {
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    .cta1 {
+        grid-template-rows: 20% 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero {
+        background-position: 50% 20%;
     }
 }
 
