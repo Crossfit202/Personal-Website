@@ -316,7 +316,9 @@ p.rotate-x {
     grid-area: links;
     display: flex;
     align-items: center;
-    justify-content: space-around
+    justify-content: space-around;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .resume {
@@ -605,6 +607,18 @@ header {
 .game__download__mac:hover {
     background-color: #4d9abb
 }
+
+footer,
+.professional__text {
+    color: white;
+    text-shadow: var(--shadow);
+    text-align: center;
+}
+
+.professional__text {
+    font-size: 35px;
+}
+
 
 @media (min-width:1000px) {
     .resume__button {
