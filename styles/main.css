@@ -86,7 +86,8 @@ img {
     grid-area: hero;
     min-height: 300px;
     min-width: 200px;
-    background: url(../images/Portraits\(73\).webp) center/cover no-repeat;
+    background: url(../assets/profilePic.png) no-repeat;
+    background-size: contain;
 }
 
 .cta,
@@ -149,10 +150,10 @@ p.rotate-x {
 
 .cta1 {
     grid-area: cta1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30% 70%;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta p {
@@ -166,11 +167,13 @@ p.rotate-x {
 .name {
     font-size: 1.5em;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .skills {
     font-weight: 300;
+    font-size: 20px;
     list-style-type: none;
 }
 
